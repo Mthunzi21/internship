@@ -1,34 +1,182 @@
-<p align="center">
-  <a href="https://github.com/cybersec-clinique/internship">
-    <img src="img/logo-black.png" alt="Logo" height="80">
-  </a>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
 
-  <h3 align="center">Developer Internship Tasks</h3>
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
 
-  <p align="center">
-    Thank you for your interest in the Developer Internship, As part of our recruitment process, we have attached tasks for you to complete in order to proceed to the final phase of our recruitment process. Below are the links to tasks where you are required to complete any 2 of 3 tasks provided.
-  </p>
-</p>
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
-## Table of Contents
+.tab button:hover {
+  background-color: #ddd;
+}
 
-* [Getting Started](#getting-started)
-* [Submitting Tasks](#submitting-tasks)
+.tab button.active {
+  background-color: #ccc;
+}
 
-## [Getting Started](#getting-started)
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: none;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+body{background-color:#566D7E;
+}
 
-To get started with the tasks you need to fork this repo by clicking the fork button on the top right hand corner next to the star button. In the tasks folders you have folders numbered 1, 2, 3. These represent the tasks and where their files should be located.
+.social-footer {
+position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: #8a8a8a;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
-### Task 1
-Create a webpage of technical documentation. It requires knowledge of HTML, CSS and basic javascript. Divide the whole webpage into two sections. The left side creates a menu with all the topics listed from top to bottom. Right side you need to mention the documentation or description for the topics. The idea is once you click on one of the topics in the left section it should load the content on the right. For click, you can use either javascript or CSS bookmark option. You don’t need to make it too fancy, just give it a simple and decent look, that looks good for technical documentation.
+.social-footer .social-footer-icons li:last-of-type {
+  margin-center:0;
+}
 
-### Task 2
-Create a webpage of the Cybersec Clinique Website. It requires knowledge in HTML, CSS and basic javascript. Divide the webpage into multiple sections Home, About, Gallery, Contact Us and The Footer. The idea is for you to create a visually designed single paged website while paying attention to best practices like SEO.
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: #fefefe;
+}
 
-### Task 3
-Build a survey form for Covid19 Pre-screening Form. It requires knowledge in HTML, CSS and basic javascript. This task will mainly test your skills on all
-kinds of inputs apart from your knowledge of forms and structuring your webpage.
+.social-footer .social-footer-icons .fa:hover {
+  color: #4a4a4a;
+  transition: color 0.3s ease-in;
+}
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+.topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
 
-## [Submitting Tasks](#submitting-tasks)
+</style>
+</head>
+<body>
 
-To submit the tasks, push your changes to the repo you forked, and add your email and name to the readme file
+<div class="tab">
+  <button class="tablinks" onclick="openContent(event, 'Home')" id="defaultOpen">Home</button>
+  <button class="tablinks" onclick="openContent(event, 'About')">About</button>
+  <button class="tablinks" onclick="openContent(event, 'Services')">Services</button>
+  <button class="tablinks" onclick="openContent(event, 'Contact us')">Contact us</button>
+</div>
+<div class="topnav"><img src="logo-black.png"> <input type="text" placeholder="Search..."></div>
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p> We are Redefining Information Security.<br>We put systems in place to detect and prevent cybercrime, always keeping in mind the context 
+  in which fraudulent transactions are concluded</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About us </h3>
+  <p> We are a Company of Certified Ethical Hackers, Digital Forensics Practitioners that plans to empower
+   Young Geeks.<br> We are a company that works with Mail&Gurdian Women into changing South Africa.
+   we are here to inspire women to follow the technology carrer.
+  M&G 200 Young SAns.Cybersec helps power the modern connected world with security made for people.<br>
+  We protect digital content, applications, and devices with intuitive, people-centered and frictionless security. <br>
+  Leading brands turn to Cybersec to secure everything from premium movies and live streaming sports, to sensitive financial and healthcare data, to mission-critical mobile applications. 
+  We enable the trusted connections our customers depend on to deliver compelling content and experiences to millions of consumers around the world. 
+  Cybersec helps partners to get to market faster, scale easily, protect valuable revenue streams, 
+  and win new business.</p> 
+</div>
+
+<div id="Services" class="tabcontent">
+  <h3>Services </h3>
+  <p> We offer different services such as <ul><li>Information Security</li>
+												<li>Information Technology</li>
+												<li>WIFI installations</li>
+												<li>Biometrics installations & Backup security storage</li>
+												<li>Desktop and Helpdesk security systems</li>
+												<li> Cyber security</li></ul></p>
+												<img src="logo.jpg">
+</div>
+
+<div id="Contact us" class="tabcontent">
+  <h3>Contact us</h3>
+<p>We Can be contacted at 012 980 0000 and on different social platforms
+    <ul class="menu simple">
+<a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  </ul>
+    </p>
+</div>
+<footer class="social-footer">
+  <div class="social-footer-left">
+    <a href="#"><img class="logo" src="logo-white.png"></a>Cybersec 2020 @Copyrights     You can follow us on our social media platforms
+  </div>
+  <div class="social-footer-icons">
+  
+    <ul class="menu simple">
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    </ul>
+  </div>
+</footer>
+
+
+<script>
+function openContent(evt, Content) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(Content).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
