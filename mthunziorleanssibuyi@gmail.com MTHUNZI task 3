@@ -1,0 +1,167 @@
+<html>
+<style>
+body {
+  font-family: 'Anaheim';
+  font-size: 1.2em;
+}
+
+#outside {
+  background-color: lightgoldenrodyellow;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+form {
+  margin: 0 auto;
+  width: 70%;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  
+}
+#survey-form {
+  background-color: white;
+}
+
+fieldset { 
+  border:1px solid lightgray;
+  margin: 10px;
+ }
+
+legend {
+  font-weight: 700;
+}
+
+#number {
+  width: 150px;
+}
+
+
+div + div {
+  margin-top: 1em;
+  }
+
+/* label {
+  
+   display: inline-block; */
+   width: 80px; */
+   text-align: right; */
+} 
+
+input, textarea {
+   
+   font: 1em sans-serif; 
+  width: 200px;
+   -moz-box-sizing: border-box;
+       box-sizing: border-box; 
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  border-color: OrangeRed;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+}
+
+.button {
+  padding-left: 90px;
+}
+
+button {
+  margin: .5em;
+  font-size: 1em;
+  text-transform: capitalize;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  
+}
+
+#submitbutton {
+  display: flex; 
+  justify-content: center;
+}
+
+</style>
+<div id="outside">
+<form id="survey-form" action="/my-handling-form-page" method="post">
+  <h1 id="title">Covid19 pre Screening </h1>
+  
+  <fieldset>
+    <!-- groups of widgets that share the same purpose, for styling and semantic purposes -->
+    <legend>Personal Details</legend>
+    <div>
+      <label id="name-label" for="name">Name:</label>
+      <input type="text" required id="name" name="user_name" placeholder="Enter name here">   </div>
+    <div>
+      <label for="lastname-label">lastname:</label>
+      <input type="Address" id="address" name="Address" placeholder="Enter address here">   </div>
+    <div>
+      <label id="number-label" for="phone">Phone Number:</label>
+      <input type="number" id="number" name="user_name" placeholder="Enter 10 digit number" min="1" max="9">  </div>
+    <div>
+      <label id="age-label" for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter Your Age">   </div>
+
+    <!-- ------------------Radio Buttons-------------------------------- -->
+    <div>
+      <label for="Gender">Gender</label>
+      <p>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+      </p>
+    </div>
+    <label for="date-label">Date of Birth:</label>
+    <input type="date" name="bday">
+  
+  </fieldset>
+  <!-- ------------------Checkboxes-------------------------------- -->
+  <fieldset>
+    <label for="Gender">Check All That Apply</label>
+    <p>
+      <input type="checkbox" name="tattoo" value="tattoo"> I have Symtoms of Covid19 or flue<br>
+      <input type="checkbox" name="age" value="Car"> I have travelled out side the country since the outbreak<br>
+      <input type="checkbox" name="car" value="car"> In the last 14 days i have been in contact with someone currently diagnosed with covid<br>
+      <input type="checkbox" name="work" value="work" checked> I have once tested positive for covid<br>
+      <input type="checkbox" name="rich" value="rich" checked>I am willing to Quarantine if i test positve<br>
+    </p>
+  </fieldset>
+  <fieldset>
+    <div>
+      <label for="politics">Subscribed to Medical Aid</label>
+      <select id="dropdown">
+  <option value="left">YES</option>
+  <option value="right">NO</option>
+  </select>
+    </div>
+  </fieldset>  
+  <fieldset>
+    <legend>Optional Questions</legend>
+    <div>
+      <label for="msg"></label>
+      <p> In 50 words or more explain your history of health</p>
+      <textarea id="msg" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>   </div>
+   
+  </fieldset>
+
+  <div id="submitbutton">
+    <button type="submit" id="submit">SUBMIT</button></div>
+<script>
+
+</script>
+</form>
+  </div>
+</html>
